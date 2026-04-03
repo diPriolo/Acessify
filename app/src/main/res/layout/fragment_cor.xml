@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="180dp"
+    android:layout_height="300dp"
+    tools:context=".personalizacao.CorFragment">
+
+    <ImageView
+        android:id="@+id/corFechar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/outline_cancel_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan"
+        android:text="Cores"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/league_spartan"
+        android:text="Pele"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/paletaP"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corbtn"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/transC"
+        app:layout_constraintStart_toStartOf="@+id/transC"
+        app:layout_constraintTop_toTopOf="@+id/transP"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/P1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#FFB08B" />
+
+        <ImageView
+            android:id="@+id/P2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#E58E66" />
+
+        <ImageView
+            android:id="@+id/P3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#865843" />
+    </LinearLayout>
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transP"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView20"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/corP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundTint="#F4C1C1"
+            android:src="@drawable/corbtn"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/league_spartan"
+        android:text="Cabelo"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/paletaC"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corbtn"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/transBa"
+        app:layout_constraintStart_toStartOf="@+id/transBa"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/C1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#272727" />
+
+        <ImageView
+            android:id="@+id/C2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#5D392B" />
+
+        <ImageView
+            android:id="@+id/C3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#8F8987" />
+
+        <ImageView
+            android:id="@+id/C4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#E8AF5F" />
+
+        <ImageView
+            android:id="@+id/C5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#E65F3D" />
+    </LinearLayout>
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transC"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView21"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/corC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/corbtn" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/league_spartan"
+        android:text="Acessorio"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/paletaA"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corbtn"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/transA"
+        app:layout_constraintEnd_toEndOf="@+id/transC"
+        app:layout_constraintStart_toStartOf="@+id/transC"
+        app:layout_constraintTop_toTopOf="@+id/transA"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/A1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#7E7E7E
+" />
+
+        <ImageView
+            android:id="@+id/A2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#FFC956" />
+
+        <ImageView
+            android:id="@+id/A3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#B22C2C     " />
+
+        <ImageView
+            android:id="@+id/A4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#1C54E0
+" />
+    </LinearLayout>
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transA"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView23"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/corA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/corbtn" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/league_spartan"
+        android:text="Brinco"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/paletaB"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corbtn"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/transB"
+        app:layout_constraintEnd_toEndOf="@+id/transC"
+        app:layout_constraintStart_toStartOf="@+id/transC"
+        app:layout_constraintTop_toTopOf="@+id/transB"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/B1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#7E7E7E
+" />
+
+        <ImageView
+            android:id="@+id/B2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#FFC956" />
+
+    </LinearLayout>
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transB"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView24"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/corB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/corbtn"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/league_spartan"
+        android:text="Barba"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/paletaBa"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corbtn"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/transC"
+        app:layout_constraintStart_toStartOf="@+id/transC"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/Ba1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#272727"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/Ba2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#5D392B"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/Ba3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#8F8987"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/Ba4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#E8AF5F"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/Ba5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="10dp"
+            android:src="#E65F3D"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transBa"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView25"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/corBa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/corbtn"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

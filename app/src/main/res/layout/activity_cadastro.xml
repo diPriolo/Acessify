@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:transitionName="shared_morph_element"
+    tools:context=".cadastro.CadastroActivity"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:transitionName="wave"
+        android:translationY="-140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waves_login" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+
+        android:transitionName="logo"
+        app:layout_constraintBottom_toBottomOf="@+id/wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/acessifylogomenu"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/Borda"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:transitionName="borda"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintEnd_toEndOf="@+id/Logo"
+        app:layout_constraintStart_toStartOf="@+id/Logo"
+        app:layout_constraintTop_toTopOf="@+id/Logo"
+        app:srcCompat="@drawable/circulo" />
+
+    <TextView
+        android:id="@+id/EditNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan"
+        android:gravity="center"
+
+        android:text="Acessify"
+        android:textAlignment="center"
+        android:textColor="#FDF6FE"
+
+        android:textSize="70sp"
+
+        android:transitionName="nome"
+        android:translationY="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Borda" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Entrar"
+        android:layout_width="310dp"
+        android:layout_height="65dp"
+        android:background="@drawable/gradiente_botoes"
+        android:fontFamily="@font/league_spartan"
+        android:gravity="center_horizontal|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Continuar"
+        android:textAllCaps="false"
+        android:textColor="#FDF6FE"
+        android:textFontWeight="700"
+        android:textSize="35sp"
+        android:transitionName="cadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wave"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/CadContainer"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Borda" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

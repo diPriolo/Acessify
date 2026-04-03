@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".bottomSheet.AvaliacaoSheet">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/bola"
+        android:fontFamily="@font/league_spartan"
+        android:text="@string/Avaliacoes"
+        android:textColor="@color/textoEscuro"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:src="@drawable/reta"
+        app:tint="@color/Cinza" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Avaliar e comentar"
+        android:textColor="@color/Texto"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnAdcionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="#C5C5C5"
+        android:fontFamily="@font/comfortaa"
+        android:insetTop="6dp"
+        android:insetBottom="6dp"
+        android:text="+ Adicionar comentario"
+        android:textAlignment="viewStart"
+        android:textColor="@color/Cinza"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginHorizontal="10dp"
+        android:src="@drawable/reta"
+        app:tint="@color/Cinza" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recAvaliacaoSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/cachorrosheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textSemAval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/league_spartan"
+            android:text="Não há avaliações"
+            android:textAlignment="center"
+            android:textColor="@color/TextoAcent2"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgcachorroAval"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cachorro_vazio" />
+    </LinearLayout>
+
+</LinearLayout>

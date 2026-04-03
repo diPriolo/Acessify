@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    tools:context=".avaliacao.FragmentAvaliacao2">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan"
+        android:text="Titulo"
+        android:textAllCaps="true"
+        android:textColor="@color/textoEscuro"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan"
+        android:text="Subtitulo"
+        android:textColor="@color/TextoDarkAcent"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/acessifylogomenu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nomeUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/league_spartan"
+                android:text="Nome"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconNivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pinacessivel" />
+
+                <TextView
+                    android:id="@+id/txtnivel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/league_spartan"
+                    android:text="nivel"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editiAvaliacao"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/cantos_redondos_borda"
+        android:elevation="2dp"
+        android:ems="10"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="start|top"
+        android:hint="Conte sobre a sua experiência"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/TextoAcent2"
+        android:textColorHint="@color/TextoAcent"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnAddFotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/TextoAcent"
+        android:fontFamily="@font/comfortaa"
+        android:text="Adicione fotos do local(6)"
+        android:textColor="@color/Texto2"
+        android:textStyle="bold"
+        app:icon="@drawable/img_icon"
+        app:iconTint="@color/Texto2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/adapaterCriar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cantos_redondos"
+        android:backgroundTint="@color/fundo_claro"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/comfortaa"
+            android:paddingRight="20dp"
+            android:text="@string/selecione_umaopcao"
+            android:textColor="@color/Texto2"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nenhuma"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/Fundo"
+                android:fontFamily="@font/comfortaa"
+                android:paddingHorizontal="5dp"
+                android:text="Nenhuma"
+                android:textAllCaps="false"
+                android:textColor="@color/TextoDarkAcent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cadeira"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/Fundo"
+                android:fontFamily="@font/comfortaa"
+                android:paddingHorizontal="5dp"
+                android:text="cadeira de rodas"
+                android:textAllCaps="false"
+                android:textColor="@color/TextoDarkAcent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cego"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/Fundo"
+                android:fontFamily="@font/comfortaa"
+                android:paddingHorizontal="5dp"
+                android:text="Cego"
+                android:textAllCaps="false"
+                android:textColor="@color/TextoDarkAcent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/idosa"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/Fundo"
+                android:fontFamily="@font/comfortaa"
+                android:paddingHorizontal="5dp"
+                android:text="Idoso"
+                android:textAllCaps="false"
+                android:textColor="@color/TextoDarkAcent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gravida"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/Fundo"
+                android:fontFamily="@font/comfortaa"
+                android:paddingHorizontal="5dp"
+                android:text="Grávida"
+                android:textAllCaps="false"
+                android:textColor="@color/TextoDarkAcent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/muleta"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/Fundo"
+                android:fontFamily="@font/comfortaa"
+                android:text="muletas"
+                android:textAllCaps="false"
+                android:textColor="@color/TextoDarkAcent"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonPublicar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/gradiente_botoes"
+        android:fontFamily="@font/league_spartan"
+        android:text="Publicar"
+        android:textAllCaps="false"
+        android:textColor="@color/Fundo"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.3" />
+
+</LinearLayout>
+</ScrollView>

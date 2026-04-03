@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/circulo_borda"
+        app:cardCornerRadius="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/league_spartan"
+                android:text="Apagar a conta!!"
+                android:textColor="@color/textoEscuro"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/league_spartan"
+                android:text="Deseja realmente apagar sua conta?"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/Fundo"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView32"
+                app:srcCompat="@drawable/cachorro_triste" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDialogApagar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/cantos_redondos"
+                android:backgroundTint="@color/VermelhoDark"
+                android:elevation="4dp"
+                android:fontFamily="@font/league_spartan"
+                android:text="Apagar"
+                android:textColor="@color/Fundo"
+                android:textColorLink="@color/Vermelho"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnDialogCancelar"
+                app:layout_constraintStart_toStartOf="@+id/btnDialogCancelar"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDialogCancelar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/white"
+                android:elevation="4dp"
+                android:fontFamily="@font/league_spartan"
+                android:text="Cancelar"
+                android:background="@drawable/cantos_redondos"
+                android:textColor="@color/circulo_borda"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDialogApagar" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

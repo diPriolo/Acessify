@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+    <item
+        android:title="voltar"
+    android:id="@+id/sairlateral"
+    android:icon="@drawable/voltaar_icon"
+
+   />
+    </group>
+<item
+    android:id="@+id/config"
+    android:icon="@drawable/config_icon"
+    android:title="Configurações"/>
+    <item
+        android:id="@+id/fale"
+        android:icon="@drawable/fale_icon"
+        android:title="Fale Conosco"/>
+    <item
+        android:id="@+id/duvidas"
+        android:icon="@drawable/duvidas_icon"
+        android:title="Duvidas"/>
+    <item
+        android:id="@+id/sair"
+        android:icon="@drawable/sair_icon"
+        android:title="Sair"/>
+</menu>
