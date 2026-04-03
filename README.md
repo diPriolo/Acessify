@@ -9,6 +9,11 @@ A plataforma foi idealizada a partir da dificuldade real enfrentada por milhões
 
 ---
 
+##  Status do projeto
+Principais funcionalidades ja prontas, sujeito a futuras melhorias e adições de ferramentas.
+
+---
+
 ## Objetivo
 
 O principal objetivo do projeto é facilitar o acesso à informação sobre acessibilidade em pontos turísticos, permitindo que usuários planejem seus passeios com autonomia, segurança e confiança.
@@ -21,6 +26,8 @@ Além disso, o projeto busca:
 * Reduzir barreiras enfrentadas por pessoas com deficiência
 
 ---
+
+
 
 ##  Funcionalidades
 
@@ -81,6 +88,18 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 * **Android Studio** → ambiente de desenvolvimento mobile
 * **Visual Studio Code** → desenvolvimento web
 
+
+---
+
+## Como acessar/testar
+
+
+
+###  Aplicativo
+
+1. Baixe o aplicativo `Acessify.apk` disponivel em: https://drive.google.com/file/d/1VeKG7dMgAnn6A2QJ0Sz4158A8kflF8MS/view?usp=drive_link
+
+2. Execute o arquivo em uma IDE ou no Android
 ---
 
 ###  Website
@@ -124,4 +143,4 @@ Ao fornecer informações acessíveis, confiáveis e colaborativas, o projeto co
 
 ## Licença
 
-Este projeto foi desenvolvido para fins acadêmicos e educacionais.
+MIT License
