@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/mulet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="6dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="Muletaa"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/protesq"
+            app:layout_constraintEnd_toStartOf="@+id/protesq"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/protesq"
+            app:rippleColor="@color/TextoAcent" />
+
+        <Button
+            android:id="@+id/protesq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="6dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="protese esquerda"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/portambas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mulet"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/TextoAcent" />
+
+        <Button
+            android:id="@+id/protdir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="protese direita"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/portambas"
+            app:layout_constraintEnd_toStartOf="@+id/portambas"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/portambas"
+            app:rippleColor="@color/TextoAcent" />
+
+        <Button
+            android:id="@+id/portambas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="6dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="protese em ambas"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/gravi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/protdir"
+            app:layout_constraintTop_toBottomOf="@+id/protesq"
+            app:rippleColor="@color/TextoAcent" />
+
+        <Button
+            android:id="@+id/cadeirante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="6dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="cadeirante"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/gravi"
+            app:layout_constraintEnd_toStartOf="@+id/gravi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/gravi"
+            app:rippleColor="@color/TextoAcent" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="Nenhuma"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gravi"
+            app:rippleColor="@color/TextoAcent" />
+
+        <Button
+            android:id="@+id/gravi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="6dp"
+            android:backgroundTint="@color/Texto2"
+            android:fontFamily="@font/league_spartan"
+            android:text="gravida"
+            android:textColor="@color/Fundo"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cadeirante"
+            app:layout_constraintTop_toBottomOf="@+id/portambas"
+            app:rippleColor="@color/TextoAcent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

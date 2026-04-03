@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="false"
+    android:transitionName="shared_morph_element"
+    tools:context="LoginActivity">
+
+
+
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:transitionName="wave"
+        android:translationY="-300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waves_login" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+
+        android:layout_alignParentTop="true"
+        android:transitionName="logo"
+        android:translationY="-150dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/acessifylogomenu" />
+
+    <ImageView
+        android:id="@+id/Borda"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:transitionName="borda"
+        android:translationY="-150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Logo"
+        app:layout_constraintEnd_toEndOf="@+id/Logo"
+        app:layout_constraintStart_toStartOf="@+id/Logo"
+        app:layout_constraintTop_toTopOf="@+id/Logo"
+        app:srcCompat="@drawable/circulo" />
+
+    <TextView
+        android:id="@+id/EditNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan"
+        android:gravity="center"
+
+        android:text="Acessify"
+        android:textAlignment="center"
+        android:textColor="#FDF6FE"
+
+        android:textSize="70sp"
+
+        android:transitionName="nome"
+        android:translationY="-150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Borda" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login"
+        android:layout_width="310dp"
+        android:layout_height="65dp"
+        android:background="@drawable/gradiente_botoes"
+        android:fontFamily="@font/league_spartan"
+        android:gravity="center_horizontal|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Continuar"
+        android:textAllCaps="false"
+        android:textColor="#FDF6FE"
+        android:textFontWeight="700"
+        android:textSize="35sp"
+        android:transitionName="login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wave"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="-300dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/log"
+        android:textColor="@color/Texto2"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wave"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColorHint="@color/Cinza"
+        app:boxCornerRadiusBottomEnd="35dp"
+        app:boxCornerRadiusBottomStart="35dp"
+        app:boxCornerRadiusTopEnd="35dp"
+        app:boxCornerRadiusTopStart="35dp"
+        app:boxStrokeColor="@color/Cinza"
+        app:boxStrokeErrorColor="@color/Vermelho"
+        app:boxStrokeWidth="3dp"
+        app:hintTextColor="@color/Cinza"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="text|textEmailAddress"
+            android:textColor="@color/Texto"
+            android:textSize="30sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColorHint="@color/Cinza"
+        app:boxCornerRadiusBottomEnd="35dp"
+        app:boxCornerRadiusBottomStart="35dp"
+        app:boxCornerRadiusTopEnd="35dp"
+        app:boxCornerRadiusTopStart="35dp"
+        app:boxStrokeColor="@color/Cinza"
+        app:boxStrokeErrorColor="@color/Vermelho"
+        app:boxStrokeWidth="3dp"
+        app:hintTextColor="@color/Cinza"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EditSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:inputType="text|textPassword"
+            android:textColor="@color/Texto"
+            android:textSize="30sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textEsqueci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/esqueci"
+        android:textColor="@color/Azul"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+    <ImageView
+        android:id="@+id/olho"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_remove_red_eye_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

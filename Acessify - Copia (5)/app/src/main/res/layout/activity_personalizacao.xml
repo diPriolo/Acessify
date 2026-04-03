@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_personalizacao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_personalizacao_scene"
+    tools:context=".personalizacao.PersonalizacaoActivity">
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waves_login" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Por ultimo..."
+        android:textColor="@color/TextoAcent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:text="Vamos criar seu avatar!"
+        android:textAlignment="center"
+        android:textColor="@color/Fundo"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/naoCriar"
+        android:layout_width="310dp"
+        android:layout_height="65dp"
+        android:background="@drawable/gradiente_botoes"
+        android:fontFamily="@font/league_spartan"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Agora não"
+        android:textAllCaps="false"
+        android:textColor="@color/Fundo"
+        android:textFontWeight="700"
+        android:textSize="35sp"
+        android:transitionName="cadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Entrar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Entrar"
+        android:layout_width="310dp"
+        android:layout_height="65dp"
+        android:background="@drawable/gradiente_botoes"
+        android:backgroundTint="@color/Fundo"
+        android:fontFamily="@font/league_spartan"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Vamos lá!"
+        android:textAllCaps="false"
+        android:textColor="@color/Texto2"
+        android:textFontWeight="700"
+        android:textSize="35sp"
+        android:transitionName="cadastro"
+        app:layout_constraintBottom_toTopOf="@+id/naoCriar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/league_spartan"
+        android:text="Personalização"
+        android:textColor="@color/Fundo"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_personalizacao"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="16dp"
+            android:columnCount="3">
+
+            <ImageView
+                android:id="@+id/c1"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_1"
+                app:tint="@color/Cinza" />
+
+            <!-- 2 -->
+            <ImageView
+                android:id="@+id/c2"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_2"
+                app:tint="@color/Cinza" />
+
+            <!-- 3 -->
+            <ImageView
+                android:id="@+id/c3"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_3"
+                app:tint="@color/Cinza" />
+
+            <!-- 4 -->
+            <ImageView
+                android:id="@+id/c4"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_4"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c5"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_5"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c6"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_6"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c7"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_7"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c8"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_8"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c9"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_9"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c10"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_10"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c11"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_11"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c12"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_12"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c13"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="2dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_13"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c14"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cabelo_14"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c15"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingHorizontal="6dp"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_15"
+                app:tint="@color/Cinza" />
+
+            <ImageView
+                android:id="@+id/c16"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ripple_persobtn"
+                android:paddingTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cabelo_16"
+                app:tint="@color/Cinza" />
+        </GridLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

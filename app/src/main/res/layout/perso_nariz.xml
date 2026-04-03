@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/nariz_p"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:adjustViewBounds="false"
+        android:background="@drawable/ripple_persobtn"
+        android:backgroundTint="@color/Fundo"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/nariz_p" />
+
+    <ImageView
+
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/Cinza" />
+
+    <ImageView
+        android:id="@+id/nariz_m"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_persobtn"
+        android:backgroundTint="@color/Fundo"
+        android:paddingLeft="20dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/nariz_m" />
+
+    <ImageView
+
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@color/Cinza" />
+
+    <ImageView
+        android:id="@+id/nariz_g"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_persobtn"
+        android:backgroundTint="@color/Fundo"
+        android:paddingLeft="30dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/nariz_g" />
+
+    <ImageView
+
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@color/Cinza" />
+
+    <ImageView
+        android:id="@+id/nariz_gg"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_persobtn"
+        android:backgroundTint="@color/Fundo"
+        android:paddingLeft="50dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/nariz_gg" />
+
+</LinearLayout>

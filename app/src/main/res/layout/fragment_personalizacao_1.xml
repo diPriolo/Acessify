@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_perso1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/personalizacao_frag1_scene"
+    tools:context=".personalizacao.Personalizacao_1Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/perso1_constraint"
+
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/perso1_redimen"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/perso"
+                android:layout_width="0dp"
+                android:layout_height="360dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/perso_masculino_padrao" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rosto_1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/olho_perso"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/olho_masculino"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/nariz_perso"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="15dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/nariz_m"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/nariz_m" />
+
+                <ImageView
+                    android:id="@+id/boca_perso"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+
+                    android:layout_marginRight="2dp"
+
+                    android:layout_marginBottom="15dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/boca_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/boca_normal" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/cima_arredondado"
+        android:backgroundTint="@color/Fundo"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabIndicatorColor="@color/TextoAcent2"
+        app:tabTextColor="@color/Texto2" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="@color/Fundo"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/btnMasc"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_persobtn"
+        android:backgroundTint="@color/Fundo"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/male_symbol_svgrepo_com"
+
+        app:tint="@color/TextoAcent" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@color/Cinza" />
+
+    <ImageButton
+        android:id="@+id/btnFem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/ripple_persobtn"
+        android:backgroundTint="@color/Fundo"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerInside"
+
+        app:srcCompat="@drawable/feminino_icon"
+        app:tint="@color/Cinza" />
+
+</LinearLayout>
