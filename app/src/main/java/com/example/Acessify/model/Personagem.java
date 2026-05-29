@@ -3,11 +3,20 @@ package com.example.Acessify.model;
 import android.graphics.Color;
 import android.util.Pair;
 
-public class Pesonagem {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-    public static final Pair<Integer,Integer> pele1 = new Pair<>(Color.parseColor("#FFB08B"),Color.parseColor("#F5855A"));
-    public static final Pair<Integer,Integer> pele2 = new Pair<>(Color.parseColor("#E58E66"),Color.parseColor("#C0724F"));
-    public static final Pair<Integer,Integer> pele3 = new Pair<>(Color.parseColor("#865843"),Color.parseColor("#593C2F"));
+public class Personagem {
+
+    public static final List<Pair<Integer,Integer>> corPeles = new ArrayList<>(Arrays.asList(new Pair<>(Color.parseColor("#FFB08B"),Color.parseColor("#F3936E")),
+            new Pair<>(Color.parseColor("#E58E66"),Color.parseColor("#C0724F")),
+            new Pair<>(Color.parseColor("#865843"),Color.parseColor("#593C2F")))); //first = preenchiment second = borda
+    public static final Integer[] corFios = {Color.parseColor("#272727"),Color.parseColor("#5D392B"),Color.parseColor("#8F8987"),Color.parseColor("#E8AF5F"),Color.parseColor("#E65F3D")};
+   public static final Integer[] corOculos ={Color.parseColor("#7E7E7E"),Color.parseColor("#FFC956"),Color.parseColor("#B22C2C"),Color.parseColor("#1C54E0"),Color.parseColor("#000000")};
+    public static final Integer[] corAcessorio ={Color.parseColor("#7E7E7E"),Color.parseColor("#FFC956")};
+
+
     private String id,cabelo,corCabelo,corPele,sexo,condicao;
 
     public String getId() {
