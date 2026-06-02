@@ -1,5 +1,6 @@
 package com.example.Acessify.personalizacao;
 
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.Acessify.Callback.CorCallback;
 import com.example.Acessify.R;
 import com.example.Acessify.model.Personagem;
 import com.skydoves.transformationlayout.TransformationLayout;
@@ -32,6 +34,8 @@ public class CorFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private CorCallback callback;
+
     private ImageView btnP,btnC,btnO,btnA,btnB;
     TransformationLayout trP,trC,trO,trA,trB;
     Boolean isTransformed = true; //para nao abrir mais de uma ao mesmo tempo
@@ -73,6 +77,12 @@ public class CorFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cor, container, false);
 
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        callback = (CorCallback) getParentFragment();
     }
 
     @Override
@@ -163,6 +173,7 @@ public class CorFragment extends Fragment {
                     btnP.setImageTintList(ColorStateList.valueOf(Personagem.corPeles.get(index).first)); //trocar cor do botao
                     trP.finishTransform(); //fechar seletor
                     isTransformed =true; //liberar os outros
+                    callback.onCorTrocada(1,index);
                 }
             });
         }
@@ -182,7 +193,7 @@ public class CorFragment extends Fragment {
                     btnC.setImageTintList(ColorStateList.valueOf(Personagem.corFios[index])); //trocar cor do botao
                     trC.finishTransform();
                     isTransformed =true;
-                    Log.d("TAG", "onClick: ");
+                    callback.onCorTrocada(2,index);
                 }
             });
         }
@@ -202,6 +213,7 @@ public class CorFragment extends Fragment {
                     btnO.setImageTintList(ColorStateList.valueOf(Personagem.corOculos[index])); //trocar cor do botao
                     trO.finishTransform();
                     isTransformed =true;
+                    callback.onCorTrocada(3,index);
                 }
             });
         }
@@ -221,6 +233,7 @@ public class CorFragment extends Fragment {
                     btnA.setImageTintList(ColorStateList.valueOf(Personagem.corAcessorio[index])); //trocar cor do botao
                     trA.finishTransform();
                     isTransformed =true;
+                    callback.onCorTrocada(4,index);
                 }
             });
         }
@@ -240,6 +253,7 @@ public class CorFragment extends Fragment {
                     btnB.setImageTintList(ColorStateList.valueOf(Personagem.corFios[index])); //trocar cor do botao
                     trB.finishTransform();
                     isTransformed =true;
+                    callback.onCorTrocada(5,index);
                 }
             });
         }

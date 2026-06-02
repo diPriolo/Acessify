@@ -2,6 +2,7 @@ package com.example.Acessify.personalizacao;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.tv.PesRequest;
 import android.os.Bundle;
 
 import androidx.constraintlayout.motion.widget.MotionLayout;
@@ -10,8 +11,8 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
-
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +21,9 @@ import android.widget.ImageView;
 
 import com.devs.vectorchildfinder.VectorChildFinder;
 import com.devs.vectorchildfinder.VectorDrawableCompat;
+import com.example.Acessify.Callback.CorCallback;
 import com.example.Acessify.R;
+import com.example.Acessify.model.Personagem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -32,7 +35,7 @@ import java.util.List;
  * Use the {@link Personalizacao_2fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Personalizacao_2fragment extends Fragment {
+public class Personalizacao_2fragment extends Fragment implements CorCallback{
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,6 +53,7 @@ public class Personalizacao_2fragment extends Fragment {
     private ConstraintLayout constraintLayout;
 
     private int cabeloDrawble,acessorioDrawble,brincoDrawble,barbaDrawble;
+    int corCabelo = 0,corOculos = 0,corPele = 0,corAcessorio = 0,corBarba =0;
 
     private ImageView perso,olhoImg,bocaImg,narizImg,cabeloImg,acessorioImg,brincoImg,barbaImg;
 
@@ -256,10 +260,12 @@ public class Personalizacao_2fragment extends Fragment {
     private void atualizarCorBarba() {
 
         //vector path cabelo
-        VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),barbaDrawble,barbaImg);
-        VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("cor");
-        path.setStrokeColor(ContextCompat.getColor(getContext(),R.color.Cinza));
-        barbaImg.invalidate();
+        if (barbaDrawble != 0) {
+            VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(), barbaDrawble, barbaImg);
+            VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("cor");
+            path.setFillColor(Personagem.corFios[corBarba]);
+            barbaImg.invalidate();
+        }
     }
 
 //brinco
@@ -313,10 +319,13 @@ public class Personalizacao_2fragment extends Fragment {
     private void atualizarCorBrinco() {
 
         //vector path cabelo
+        if (brincoDrawble != 0){
+
         VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),brincoDrawble,brincoImg);
         VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("cor");
-        path.setStrokeColor(ContextCompat.getColor(getContext(),R.color.Cinza));
+        path.setFillColor(Personagem.corAcessorio[corAcessorio]);
         brincoImg.invalidate();
+    }
     }
 //acessorios
     private void estanciarAcessorio(View view) {
@@ -369,10 +378,13 @@ public class Personalizacao_2fragment extends Fragment {
     private void atualizarCorCAcessorio() {
 
         //vector path cabelo
-        VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),acessorioDrawble,acessorioImg);
-        VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("cor");
-        path.setStrokeColor(ContextCompat.getColor(getContext(),R.color.AmareloDark));
-        acessorioImg.invalidate();
+        if (acessorioDrawble != 0){
+            VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),acessorioDrawble,acessorioImg);
+            VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("cor");
+            path.setStrokeColor(Personagem.corOculos[corOculos]);
+            acessorioImg.invalidate();
+        }
+
     }
 
 
@@ -427,10 +439,55 @@ public class Personalizacao_2fragment extends Fragment {
         private void atualizarCorCabelo() {
 
             //vector path cabelo
+
                 VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),cabeloDrawble,cabeloImg);
                 VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("cor");
-                path.setFillColor(Color.parseColor("#FF0000"));
+                path.setFillColor(Personagem.corFios[corCabelo]);
                 cabeloImg.invalidate();
+
+
         }
+    private void atualizarCorPele(){
+
+        VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),R.drawable.perso_feminino_padrao,perso);
+        VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("pele");
+        path.setFillColor(Personagem.corPeles.get(corPele).first);
+        perso.invalidate();
+        narizImg.setImageTintList(ColorStateList.valueOf(Personagem.corPeles.get(corPele).second));
+        bocaImg.setImageTintList(ColorStateList.valueOf(Personagem.corPeles.get(corPele).second));
+        olhoImg.setImageTintList(ColorStateList.valueOf(Personagem.corPeles.get(corPele).second));
+    }
+
+    @Override
+    public void onCorTrocada(int tipo, int cor) {
+        Log.d("onCorTrocada","/"+tipo+"//"+cor);
+        switch (tipo){
+            case 1:
+                Log.d("onCorTrocada","pele"+cor);
+                corPele = cor;
+                atualizarCorPele();
+                break;
+            case 2:
+                Log.d("onCorTrocada","pele"+cor);
+                corCabelo = cor;
+                atualizarCorCabelo();
+                break;
+            case 3:
+                Log.d("onCorTrocada","pele"+cor);
+                corOculos = cor;
+                atualizarCorCAcessorio();
+                break;
+            case 4:
+                Log.d("onCorTrocada","pele"+cor);
+                 corAcessorio= cor;
+                atualizarCorBrinco();
+                break;
+            case 5:
+                Log.d("onCorTrocada","pele"+cor);
+                corBarba= cor;
+                atualizarCorBarba();
+                break;
+        }
+    }
     //acessorio
 }
