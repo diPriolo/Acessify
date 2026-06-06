@@ -175,14 +175,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.Acessify.personalizacao.CorFragment"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/tabLayout2"
-        app:layout_constraintEnd_toEndOf="parent" />
+
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.skydoves.transformationlayout.TransformationLayout
+            android:id="@+id/transCor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:transformation_duration="550"
+            app:transformation_targetView="@id/cardCor">
+
+            <ImageView
+                android:id="@+id/corBtn"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/cor_icon" />
+        </com.skydoves.transformationlayout.TransformationLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCor"
+            android:layout_width="180dp"
+            android:layout_height="260dp"
+
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.example.Acessify.personalizacao.CorFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                app:layout_constraintBottom_toTopOf="@+id/tabLayout2"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

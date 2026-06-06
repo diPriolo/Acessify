@@ -36,7 +36,7 @@ public class CorFragment extends Fragment {
     private String mParam2;
     private CorCallback callback;
 
-    private ImageView btnP,btnC,btnO,btnA,btnB;
+    private ImageView btnP,btnC,btnO,btnA,btnB,btnFechar;
     TransformationLayout trP,trC,trO,trA,trB;
     Boolean isTransformed = true; //para nao abrir mais de uma ao mesmo tempo
 
@@ -103,6 +103,7 @@ public class CorFragment extends Fragment {
         btnO = view.findViewById(R.id.btnO);
         btnA = view.findViewById(R.id.btnA);
         btnB = view.findViewById(R.id.btnB);
+        btnFechar = view.findViewById(R.id.btnFechar);
 
         btnP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +113,12 @@ public class CorFragment extends Fragment {
                     trP.startTransform();
                     isTransformed = false;
                 }
+            }
+        });
+        btnFechar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              callback.onCorTrocada(0,0);
             }
         });
         btnC.setOnClickListener(new View.OnClickListener() {

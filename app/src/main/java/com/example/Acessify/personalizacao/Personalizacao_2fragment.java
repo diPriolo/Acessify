@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.media.tv.PesRequest;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
@@ -26,6 +27,7 @@ import com.example.Acessify.R;
 import com.example.Acessify.model.Personagem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.skydoves.transformationlayout.TransformationLayout;
 
 import java.util.Arrays;
 import java.util.List;
@@ -56,6 +58,8 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
     int corCabelo = 0,corOculos = 0,corPele = 0,corAcessorio = 0,corBarba =0;
 
     private ImageView perso,olhoImg,bocaImg,narizImg,cabeloImg,acessorioImg,brincoImg,barbaImg;
+    private TransformationLayout transCor;
+    private CardView cardCor;
 
 
 
@@ -105,6 +109,18 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
         brincoImg = view.findViewById(R.id.brinco_perso);
         barbaImg = view.findViewById(R.id.barba_perso);
         motionLayout = view.findViewById(R.id.frag_perso1);
+        cabeloDrawble = R.drawable.cabelo_8;
+
+        cardCor = view.findViewById(R.id.cardCor);
+        transCor = view.findViewById(R.id.transCor); // esta dentro de um contraint para n colidir como motion layout
+
+
+        view.findViewById(R.id.corBtn).setOnClickListener(new View.OnClickListener() { ///abrir car das cores
+            @Override
+            public void onClick(View v) {
+                transCor.startTransform();
+            }
+        });
         //clickar e dar zoom
         perso.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -486,6 +502,9 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
                 Log.d("onCorTrocada","pele"+cor);
                 corBarba= cor;
                 atualizarCorBarba();
+                break;
+            default:
+                transCor.finishTransform();
                 break;
         }
     }

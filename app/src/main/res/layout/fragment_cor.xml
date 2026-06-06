@@ -2,15 +2,23 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
-    android:layout_height="300dp"
+    android:layout_width="180dp"
+    android:layout_height="260dp"
     app:cardBackgroundColor="@color/Fundo"
     tools:context=".personalizacao.CorFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/btnFechar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_cancel_24"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView20"
@@ -22,7 +30,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView36"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btnFechar" />
 
         <TextView
             android:id="@+id/textView36"
@@ -77,10 +85,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
-            app:transformation_targetView="@id/paletaP"
             app:layout_constraintBottom_toBottomOf="@+id/textView20"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView20">
+            app:layout_constraintTop_toTopOf="@+id/textView20"
+            app:transformation_targetView="@id/paletaP">
 
             <ImageView
                 android:id="@+id/btnP"
@@ -100,7 +108,7 @@
             android:elevation="5dp"
             android:orientation="vertical"
             android:padding="2dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@+id/transformatioA"
             app:layout_constraintEnd_toEndOf="@+id/transformatioA"
             app:layout_constraintStart_toStartOf="@+id/transformatioA"
@@ -134,12 +142,12 @@
         <com.skydoves.transformationlayout.TransformationLayout
             android:id="@+id/transformatioC"
             android:layout_width="wrap_content"
-            app:transformation_targetView="@id/paletaC"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView36"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView36">
+            app:layout_constraintTop_toTopOf="@+id/textView36"
+            app:transformation_targetView="@id/paletaC">
 
             <ImageView
                 android:id="@+id/btnC"
@@ -206,14 +214,14 @@
 
         <com.skydoves.transformationlayout.TransformationLayout
             android:id="@+id/transformatioO"
-            app:transformation_targetView="@id/paletaO"
-
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView37"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView37">
+            app:layout_constraintTop_toTopOf="@+id/textView37"
+            app:transformation_targetView="@id/paletaO">
 
             <ImageView
                 android:id="@+id/btnO"
@@ -261,6 +269,7 @@
                 android:layout_marginTop="15dp"
                 android:src="@drawable/resource_corbtn"
                 app:tint="@color/Amarelo" />
+
             <ImageView
                 android:id="@+id/O4"
                 android:layout_width="match_parent"
@@ -281,13 +290,13 @@
 
         <com.skydoves.transformationlayout.TransformationLayout
             android:id="@+id/transformatioA"
-            app:transformation_targetView="@id/paletaA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView38"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView38">
+            app:layout_constraintTop_toTopOf="@+id/textView38"
+            app:transformation_targetView="@id/paletaA">
 
             <ImageView
                 android:id="@+id/btnA"
@@ -331,14 +340,14 @@
 
         <com.skydoves.transformationlayout.TransformationLayout
             android:id="@+id/transformatioB"
-            app:transformation_targetView="@id/paletaB"
-
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView39"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView39">
+            app:layout_constraintTop_toTopOf="@+id/textView39"
+            app:transformation_targetView="@id/paletaB">
 
             <ImageView
                 android:id="@+id/btnB"
