@@ -21,6 +21,7 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.Acessify.R;
+import com.example.Acessify.model.Personagem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -31,6 +32,7 @@ import java.util.List;
 public class PersonalizacaoActivity extends AppCompatActivity {
     Button btnCriar, btnContinuar;
     MotionLayout motionLayout;
+    Personagem personagem;
     Personalizacao_1Fragment perso1_frag = new Personalizacao_1Fragment();
     Personalizacao_2fragment perso2_frag = new Personalizacao_2fragment();
 
@@ -72,6 +74,7 @@ public class PersonalizacaoActivity extends AppCompatActivity {
             if (sequencia==1){
                 sequencia = 2;
                motionLayout.transitionToState(R.id.mid);
+               salvarPersonalizacao1();
 
 
             }
@@ -79,6 +82,7 @@ public class PersonalizacaoActivity extends AppCompatActivity {
                motionLayout.transitionToState(R.id.end);
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_personalizacao,perso2_frag).commit();
                 Log.d("ad", "continuarPersonalizacao: ");
+                perso2_frag.resgatarPersonalizacao(personagem);
 
 
 
@@ -88,6 +92,11 @@ public class PersonalizacaoActivity extends AppCompatActivity {
 
     private void iniciarPersonalizacao() {
         motionLayout.transitionToEnd();
+    }
+    public void salvarPersonalizacao1(){
+        personagem = new Personagem();
+        personagem = perso1_frag.passarPersonagem();
+
     }
 
 

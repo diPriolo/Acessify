@@ -25,6 +25,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.Acessify.R;
+import com.example.Acessify.model.Personagem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -371,6 +372,14 @@ public class Personalizacao_1Fragment extends Fragment {
             }
         }
 
+    }
+    public Personagem passarPersonagem(){
+        Personagem personagem = new Personagem();
+        personagem.setBoca(boca);
+        personagem.setNariz(nariz);
+        personagem.setCondicao(condicao);
+        personagem.setSexo(sexo);
+        return personagem;
     }
 
 }

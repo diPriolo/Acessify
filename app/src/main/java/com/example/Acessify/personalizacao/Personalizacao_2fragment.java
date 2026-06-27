@@ -2,6 +2,7 @@ package com.example.Acessify.personalizacao;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.tv.PesRequest;
 import android.os.Bundle;
 
@@ -50,12 +51,14 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
     private TabLayout tabLayout;
     private ViewPager2 viewPager;
     private boolean isZoom = true;
+    private Personagem personagem;
 
     private MotionLayout motionLayout;
     private ConstraintLayout constraintLayout;
 
     private int cabeloDrawble,acessorioDrawble,brincoDrawble,barbaDrawble;
-    int corCabelo = 0,corOculos = 0,corPele = 0,corAcessorio = 0,corBarba =0;
+
+    int corCabelo = 0,corOculos = 0,corPele = 0,corAcessorio = 0,corBarba =0,drawPerso;
 
     private ImageView perso,olhoImg,bocaImg,narizImg,cabeloImg,acessorioImg,brincoImg,barbaImg;
     private TransformationLayout transCor;
@@ -113,7 +116,9 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
 
         cardCor = view.findViewById(R.id.cardCor);
         transCor = view.findViewById(R.id.transCor); // esta dentro de um contraint para n colidir como motion layout
-
+        //atualiar
+        atualizarPersonagem(view);
+        atualizarCorCabelo();
 
         view.findViewById(R.id.corBtn).setOnClickListener(new View.OnClickListener() { ///abrir car das cores
             @Override
@@ -140,7 +145,7 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
             pivotLayout.setPivotX(pivotLayout.getWidth() / 2f);
             pivotLayout.setPivotY(0f);
         });
-      margemFeminina(view);
+
         criarTab(view);
         return view;
     }
@@ -465,7 +470,7 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
         }
     private void atualizarCorPele(){
 
-        VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),R.drawable.perso_feminino_padrao,perso);
+        VectorChildFinder vectorChildFinder = new VectorChildFinder(getContext(),drawPerso,perso);
         VectorDrawableCompat.VFullPath path = vectorChildFinder.findPathByName("pele");
         path.setFillColor(Personagem.corPeles.get(corPele).first);
         perso.invalidate();
@@ -507,6 +512,101 @@ public class Personalizacao_2fragment extends Fragment implements CorCallback{
                 transCor.finishTransform();
                 break;
         }
+    }
+    public void resgatarPersonalizacao(Personagem p){
+        personagem = new Personagem();
+        personagem = p;
+
+
+    }
+
+    private void atualizarPersonagem(View view) {
+
+        int img[] = new int[1];
+        switch (personagem.getSexo()) {
+            case "h":
+
+                //condicao
+                switch (personagem.getCondicao()) {
+                    case "mul":
+                        img[0] = R.drawable.perso_masculino_muleta;
+                        break;
+                    case "protesq":
+                        img[0] = R.drawable.perso_masculino_esquerda;
+                        break;
+                    case "protdir":
+                        img[0] = R.drawable.perso_masculino_direita;
+                        break;
+                    case "portambas":
+                        img[0] = R.drawable.perso_masculina_duas;
+                        break;
+                    case "cadeirante":
+                        img[0] = R.drawable.perso_masculino_cadeira;
+                        break;
+                    default:
+                        img[0] = R.drawable.perso_masculino_padrao;
+                }
+                break; //fim condicao
+            //sexo
+            case "f":
+                margemFeminina(view);
+                switch (personagem.getCondicao()) {
+                    case "mul":
+                        img[0] = R.drawable.perso_feminino_muleta;
+                        break;
+                    case "protesq":
+                        img[0] = R.drawable.perso_feminino_esquerda;
+                        break;
+                    case "protdir":
+                        img[0] = R.drawable.perso_feminino_direita;
+                        break;
+                    case "portambas":
+                        img[0] = R.drawable.perso_feminino_duas;
+                        break;
+                    case "cadeirante":
+                        img[0] = R.drawable.perso_feminino_cadeira;
+                        break;
+                    case "gravi":
+                        img[0] = R.drawable.perso_feminino_gravida;
+                        break;
+                    default:
+                        img[0] = R.drawable.perso_feminino_padrao;
+                }
+                break; //fim sexo
+            default:
+                img[0] = R.drawable.perso_masculino_padrao;
+        }
+        //boca
+        switch (personagem.getBoca()) {
+            case "fechada":
+                bocaImg.setImageResource(R.drawable.boca_serio);
+                break;
+            case "grande":
+                bocaImg.setImageResource(R.drawable.boca_sorrindo);
+                break;
+            default:
+                bocaImg.setImageResource(R.drawable.boca_normal);
+        }
+        //nariz
+        switch (personagem.getBoca()){
+            case "p":
+                narizImg.setImageResource(R.drawable.nariz_p);
+                break;
+            case "g":
+                narizImg.setImageResource(R.drawable.nariz_g);
+
+                break;
+            case "gg":
+                narizImg.setImageResource(R.drawable.nariz_gg);
+
+                break;
+            default:
+                narizImg.setImageResource(R.drawable.nariz_m);
+
+        }
+        perso.setImageResource(img[0]);
+        drawPerso = img[0];
+
     }
     //acessorio
 }

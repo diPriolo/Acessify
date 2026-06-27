@@ -17,7 +17,31 @@ public class Personagem {
     public static final Integer[] corAcessorio ={Color.parseColor("#7E7E7E"),Color.parseColor("#FFC956")};
 
 
-    private String id,cabelo,corCabelo,corPele,sexo,condicao;
+    private String id;
+    private String cabelo;
+    private String corCabelo;
+    private String corPele;
+    private String sexo;
+    private String condicao;
+    private String boca;
+
+    public String getBoca() {
+        return boca;
+    }
+
+    public void setBoca(String boca) {
+        this.boca = boca;
+    }
+
+    public String getNariz() {
+        return nariz;
+    }
+
+    public void setNariz(String nariz) {
+        this.nariz = nariz;
+    }
+
+    private String nariz;
 
     public String getId() {
         return id;
